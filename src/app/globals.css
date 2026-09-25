@@ -44,3 +44,25 @@ body {
     animation-duration: 0.01ms !important;
   }
 }
+
+@keyframes ring-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.4em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ring-line {
+  animation: ring-line-in 0.9s ease-out both;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

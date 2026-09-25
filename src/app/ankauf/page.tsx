@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
-import PhotoSlot from "@/components/PhotoSlot";
 
 export const metadata: Metadata = {
   title: "Ankauf von Gold, Silber, Platin & Luxusuhren",
@@ -23,6 +22,41 @@ const metals = [
 
 const watches = ["Rolex", "Cartier", "Patek Philippe", "Audemars Piguet"];
 
+const elements = [
+  {
+    symbol: "Au",
+    name: "Gold",
+    number: 79,
+    mass: "196,97",
+    bg: "linear-gradient(135deg, #e9d18f 0%, #c9a04e 55%, #a5844b 100%)",
+    fg: "#2a2114",
+  },
+  {
+    symbol: "Ag",
+    name: "Silber",
+    number: 47,
+    mass: "107,87",
+    bg: "linear-gradient(135deg, #f4f4f2 0%, #d5d6d4 55%, #b5b7b6 100%)",
+    fg: "#232323",
+  },
+  {
+    symbol: "Pt",
+    name: "Platin",
+    number: 78,
+    mass: "195,08",
+    bg: "linear-gradient(135deg, #e6e4df 0%, #bdbab3 55%, #97948d 100%)",
+    fg: "#1f1e1c",
+  },
+  {
+    symbol: "Pd",
+    name: "Palladium",
+    number: 46,
+    mass: "106,42",
+    bg: "linear-gradient(135deg, #3a3835 0%, #262523 60%, #171615 100%)",
+    fg: "#f1ece2",
+  },
+];
+
 const steps = [
   {
     title: "Vorbeikommen",
@@ -41,10 +75,10 @@ const steps = [
 export default function AnkaufPage() {
   return (
     <>
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 md:grid-cols-2 md:gap-16 md:pb-24 md:pt-16">
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 pb-12 pt-6 sm:px-8 md:grid-cols-2 md:gap-16 md:pb-24 md:pt-16">
         <div>
           <p className="eyebrow">Ankauf</p>
-          <h1 className="mt-5 font-serif text-5xl leading-[1.05] text-ink sm:text-6xl">
+          <h1 className="mt-4 font-serif text-[2.75rem] leading-[1.05] text-ink sm:mt-5 sm:text-6xl">
             Fair bewertet. Sofort ausgezahlt.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">
@@ -62,20 +96,30 @@ export default function AnkaufPage() {
             ))}
           </ul>
         </div>
-        <div className="relative mx-auto aspect-square w-full max-w-lg overflow-hidden bg-ink">
-          <Image
-            src="/images/goldankauf.jpg"
-            alt="Gold- und Silberankauf im Oppenheimer Schmuck-Atelier"
-            fill
-            priority
-            sizes="(min-width: 768px) 512px, 100vw"
-            className="object-cover"
-          />
+        <div className="mx-auto grid w-full max-w-md grid-cols-2 gap-3 sm:gap-4 md:max-w-lg">
+          {elements.map((e) => (
+            <div
+              key={e.symbol}
+              className="relative flex aspect-square flex-col justify-between p-4 shadow-[0_18px_40px_-24px_rgba(23,22,21,0.55)] transition-transform duration-500 hover:-translate-y-1 sm:p-5"
+              style={{ background: e.bg, color: e.fg }}
+            >
+              <div className="flex items-start justify-between text-xs tracking-wide opacity-80 sm:text-sm">
+                <span>{e.number}</span>
+                <span>{e.mass}</span>
+              </div>
+              <span className="font-serif text-6xl leading-none sm:text-7xl">
+                {e.symbol}
+              </span>
+              <span className="text-xs uppercase tracking-[0.22em] sm:text-sm">
+                {e.name}
+              </span>
+            </div>
+          ))}
         </div>
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 md:grid-cols-3 md:py-20">
           {steps.map((s, i) => (
             <div key={s.title} className="border-t border-gold pt-6">
               <p className="font-serif text-lg text-gold">0{i + 1}</p>
@@ -86,8 +130,16 @@ export default function AnkaufPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-20 sm:px-8 md:grid-cols-2 md:gap-16 md:py-28">
-        <PhotoSlot label="RFA-Gerät Goldscope SD515" />
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-28">
+        <div className="relative aspect-[4/3] overflow-hidden border border-line bg-white">
+          <Image
+            src="/images/goldscope.jpg"
+            alt="Röntgenfluoreszenz-Gerät Goldscope SD515"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-contain p-4"
+          />
+        </div>
         <div>
           <p className="eyebrow">Modernste Messtechnik</p>
           <h2 className="mt-4 font-serif text-4xl text-ink sm:text-5xl">
@@ -105,12 +157,12 @@ export default function AnkaufPage() {
       </section>
 
       <section className="bg-ink text-cream">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-24">
           <p className="eyebrow !text-gold">Luxusuhren</p>
           <h2 className="mt-4 max-w-2xl font-serif text-4xl sm:text-5xl">
             Wir kaufen auch hochwertige Uhren an.
           </h2>
-          <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-4 font-serif text-2xl sm:grid-cols-4">
+          <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 font-serif text-xl sm:grid-cols-4 sm:text-2xl md:mt-10">
             {watches.map((w) => (
               <li key={w} className="border-b border-cream/15 pb-3">
                 {w}

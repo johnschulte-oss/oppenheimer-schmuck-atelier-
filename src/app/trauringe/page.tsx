@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 const styles = [
-  { img: "katalog_klassisch.jpg", name: "Klassisch" },
-  { img: "katalog_gold.jpg", name: "Gelbgold" },
-  { img: "katalog_matt.jpg", name: "Matt & Struktur" },
-  { img: "katalog_mehrfarbig.jpg", name: "Mehrfarbig" },
-  { img: "katalog_memoire.jpg", name: "Mit Diamanten" },
-  { img: "katalog_ausgefallen.jpg", name: "Ausgefallen" },
+  { img: "klassisch.jpg", name: "Klassisch" },
+  { img: "gelbgold.jpg", name: "Gelbgold" },
+  { img: "platin.jpg", name: "Platin" },
+  { img: "rosegold.jpg", name: "Roségold" },
+  { img: "bicolor.jpg", name: "Bicolor" },
+  { img: "diamanten.jpg", name: "Mit Diamanten" },
 ];
 
 export default function TrauringePage() {
@@ -31,23 +31,23 @@ export default function TrauringePage() {
       />
 
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-24">
           <h2 className="font-serif text-4xl text-ink sm:text-5xl">
             Finden Sie Ihren Stil
           </h2>
-          <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-5 md:mt-12 md:grid-cols-3">
             {styles.map((s) => (
               <figure key={s.img}>
-                <div className="relative aspect-square overflow-hidden bg-[#f2f0ec]">
+                <div className="relative aspect-square overflow-hidden border border-line bg-white">
                   <Image
-                    src={`/images/rubin/${s.img}`}
+                    src={`/images/trauringe/${s.img}`}
                     alt={`Trauringe ${s.name}`}
                     fill
                     sizes="(min-width: 768px) 33vw, 50vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-contain transition-transform duration-700 hover:scale-105"
                   />
                 </div>
-                <figcaption className="mt-4 font-serif text-2xl text-ink">
+                <figcaption className="mt-3 font-serif text-xl text-ink sm:text-2xl">
                   {s.name}
                 </figcaption>
               </figure>
@@ -56,7 +56,7 @@ export default function TrauringePage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-20 sm:px-8 md:grid-cols-2 md:gap-16">
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-20">
         <div className="relative mx-auto aspect-square w-full max-w-md bg-white">
           <Image
             src="/images/rubin/aboutRubin_engraving.webp"

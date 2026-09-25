@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
-import PhotoSlot from "@/components/PhotoSlot";
 
 export const metadata: Metadata = {
   title: "Schmuck",
@@ -11,16 +10,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "/schmuck" },
 };
 
-const sections = [
+type Item = { img: string; name: string; product?: boolean };
+
+const sections: { id: string; title: string; text: string; items: Item[] }[] = [
   {
     id: "diamantschmuck",
     title: "Diamantschmuck",
     text: "Ketten, Ohrringe, Tennisarmbänder und Sets mit funkelnden Diamanten.",
     items: [
-      { img: "rubin_teaser_necklaces.webp", name: "Anhänger & Ketten" },
-      { img: "rubin_teaser_earrings.webp", name: "Ohrschmuck" },
-      { img: "rubin_teaser_tennis.webp", name: "Tennis-Armbänder" },
-      { img: "rubin_teaser_jewelry_sets.webp", name: "Schmuck-Sets" },
+      { img: "kette-gold.jpg", name: "Anhänger & Ketten", product: true },
+      { img: "ohrstecker-gold.jpg", name: "Ohrstecker", product: true },
+      { img: "tennisarmband.jpg", name: "Tennis-Armbänder", product: true },
+      { img: "schmuckset.jpg", name: "Schmuck-Sets", product: true },
     ],
   },
   {
@@ -28,15 +29,19 @@ const sections = [
     title: "Goldschmuck",
     text: "Gelbgold, Weißgold und Roségold. Zeitlos und wertbeständig.",
     items: [
-      { img: "rubin_teaser_alliances.webp", name: "Ringe in Gold" },
-      { img: "rubin_teaser_ring_sets.webp", name: "Kombinationen" },
+      { img: "ring-gold-seide.jpg", name: "Ringe in Gelbgold" },
+      { img: "ring-gold-zarge.jpg", name: "Solitär mit Zarge" },
     ],
   },
   {
     id: "silberschmuck",
     title: "Silberschmuck",
-    text: "Leichter Alltagsschmuck aus Sterlingsilber. Schön zum Verschenken.",
-    items: [],
+    text: "Heller, leichter Schmuck für jeden Tag. Schön zum Verschenken.",
+    items: [
+      { img: "kette-weiss.jpg", name: "Ketten", product: true },
+      { img: "ohrring-weiss-closeup.jpg", name: "Ohrschmuck" },
+      { img: "ring-weiss-stein.jpg", name: "Ringe" },
+    ],
   },
 ];
 
@@ -47,13 +52,17 @@ export default function SchmuckPage() {
         eyebrow="Schmuck"
         title="Kleine Dinge, große Freude."
         text="Diamant-, Gold- und Silberschmuck für jeden Anlass."
-        image="/images/rubin/rubin_teaser_jewelry_sets.webp"
-        imageAlt="Schmuck-Set mit Anhänger, Ring und Ohrsteckern"
+        image="/images/schmuck/ohrring-gold-closeup.jpg"
+        imageAlt="Ohrstecker in Gelbgold mit Diamant"
       />
 
-      <nav className="mx-auto flex max-w-7xl flex-wrap gap-3 px-5 sm:px-8">
+      <nav className="mx-auto no-scrollbar flex max-w-7xl gap-2 overflow-x-auto px-5 pb-2 sm:gap-3 sm:px-8">
         {sections.map((s) => (
-          <a key={s.id} href={`#${s.id}`} className="btn-line !px-5 !py-2.5">
+          <a
+            key={s.id}
+            href={`#${s.id}`}
+            className="btn-line shrink-0 !px-4 !py-2.5 sm:!px-5"
+          >
             {s.title}
           </a>
         ))}
@@ -63,38 +72,38 @@ export default function SchmuckPage() {
         <section
           key={s.id}
           id={s.id}
-          className={`scroll-mt-24 ${i % 2 === 0 ? "bg-white" : ""} mt-16`}
+          className={`mt-10 scroll-mt-20 md:mt-16 ${i % 2 === 0 ? "bg-white" : ""}`}
         >
-          <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+          <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-20">
             <div className="max-w-xl">
               <h2 className="font-serif text-4xl text-ink sm:text-5xl">
                 {s.title}
               </h2>
               <p className="mt-3 text-lg text-stone">{s.text}</p>
             </div>
-            <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-5 md:mt-10 lg:grid-cols-4">
               {s.items.map((it) => (
                 <figure key={it.img}>
-                  <div className="relative aspect-square overflow-hidden bg-sand">
+                  <div
+                    className={`relative aspect-square overflow-hidden ${
+                      it.product ? "border border-line bg-white" : "bg-sand"
+                    }`}
+                  >
                     <Image
-                      src={`/images/rubin/${it.img}`}
-                      alt={it.name}
+                      src={`/images/schmuck/${it.img}`}
+                      alt={`${s.title}: ${it.name}`}
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover transition-transform duration-700 hover:scale-105"
+                      className={`transition-transform duration-700 hover:scale-105 ${
+                        it.product ? "object-contain p-3" : "object-cover"
+                      }`}
                     />
                   </div>
-                  <figcaption className="mt-4 font-serif text-2xl text-ink">
+                  <figcaption className="mt-3 font-serif text-xl text-ink sm:text-2xl">
                     {it.name}
                   </figcaption>
                 </figure>
               ))}
-              {s.items.length === 0 && (
-                <PhotoSlot
-                  label="Silberschmuck"
-                  className="col-span-2 !aspect-[2/1]"
-                />
-              )}
             </div>
           </div>
         </section>

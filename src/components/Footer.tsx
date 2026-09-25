@@ -5,7 +5,7 @@ import { company, hours, nav } from "@/lib/data";
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream/80">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-3 md:gap-12 md:py-16">
         <div>
           <Image
             src="/images/logo.png"

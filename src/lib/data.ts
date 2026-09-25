@@ -33,7 +33,8 @@ export const categories = [
     href: "/trauringe",
     title: "Trauringe",
     text: "Für den schönsten Tag",
-    image: "/images/rubin/katalog_klassisch.jpg",
+    image: "/images/trauringe/gelbgold.jpg",
+    contain: true,
   },
   {
     href: "/verlobungsringe",
@@ -46,7 +47,7 @@ export const categories = [
     href: "/schmuck",
     title: "Schmuck",
     text: "Diamant, Gold & Silber",
-    image: "/images/rubin/rubin_teaser_necklaces.webp",
+    image: "/images/schmuck/ohrring-gold-closeup.jpg",
   },
   {
     href: "/uhren",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
 import DiamondShapes from "@/components/DiamondShapes";
-import RingScrub from "@/components/RingScrub";
+import RingHero from "@/components/RingHero";
 
 export const metadata: Metadata = {
   title: "Verlobungsringe",
@@ -12,28 +12,27 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
-  { img: "config_oval.webp", name: "Solitär mit Oval", contain: true },
-  { img: "rubin_teaser_ring_sets.webp", name: "Ring-Sets" },
-  { img: "rubin_teaser_eternity_rings.webp", name: "Memoire-Ringe" },
+  { img: "rubin/config_oval.webp", name: "Solitär mit Oval" },
+  { img: "schmuck/solitaer-gold.jpg", name: "Solitär in Gelbgold" },
+  { img: "schmuck/memoire-ring.jpg", name: "Memoire-Ringe" },
   {
-    img: "rubin_aboutRubin_manufacture_ring.webp",
+    img: "rubin/rubin_aboutRubin_manufacture_ring.webp",
     name: "Klassischer Solitär",
-    contain: true,
   },
 ];
 
 export default function VerlobungsringePage() {
   return (
     <>
-      <RingScrub />
+      <RingHero />
 
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-28">
           <DiamondShapes />
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 pt-20 sm:px-8 md:grid-cols-2 md:gap-16 md:pt-28">
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 pt-14 sm:px-8 md:grid-cols-2 md:gap-16 md:pt-28">
         <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-sand">
           <Image
             src="/images/steinformen.jpg"
@@ -55,27 +54,23 @@ export default function VerlobungsringePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-24">
+      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-24">
         <h2 className="font-serif text-4xl text-ink sm:text-5xl">
           Beliebte Modelle
         </h2>
-        <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-5 md:mt-12 lg:grid-cols-4">
           {gallery.map((g) => (
             <figure key={g.img}>
-              <div
-                className={`relative aspect-square overflow-hidden ${
-                  g.contain ? "bg-white" : "bg-sand"
-                }`}
-              >
+              <div className="relative aspect-square overflow-hidden border border-line bg-white">
                 <Image
-                  src={`/images/rubin/${g.img}`}
+                  src={`/images/${g.img}`}
                   alt={g.name}
                   fill
                   sizes="(min-width: 1024px) 25vw, 50vw"
-                  className={g.contain ? "object-contain p-4" : "object-cover"}
+                  className="object-contain p-3"
                 />
               </div>
-              <figcaption className="mt-4 font-serif text-2xl text-ink">
+              <figcaption className="mt-3 font-serif text-xl text-ink sm:text-2xl">
                 {g.name}
               </figcaption>
             </figure>

@@ -41,8 +41,8 @@ export default function DiamondShapes() {
   const shape = shapes[active];
 
   return (
-    <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-      <div className="relative mx-auto aspect-square w-full max-w-sm">
+    <div className="grid items-center gap-6 md:grid-cols-2 md:gap-16">
+      <div className="relative mx-auto aspect-square w-full max-w-[16rem] md:max-w-sm">
         {shapes.map((s, i) => (
           <Image
             key={s.key}

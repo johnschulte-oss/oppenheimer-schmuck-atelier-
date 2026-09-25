@@ -10,14 +10,14 @@ export default function CtaBand({
 }) {
   return (
     <section className="bg-sand">
-      <div className="mx-auto flex max-w-7xl flex-col items-start gap-8 px-5 py-16 sm:px-8 md:flex-row md:items-center md:justify-between md:py-20">
+      <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between md:gap-8 md:py-20">
         <div>
-          <h2 className="font-serif text-4xl leading-tight text-ink">
+          <h2 className="font-serif text-3xl leading-tight text-ink sm:text-4xl">
             {title}
           </h2>
           <p className="mt-3 max-w-xl text-stone">{text}</p>
         </div>
-        <div className="flex flex-wrap gap-3">
+        <div className="grid w-full grid-cols-1 gap-3 sm:flex sm:w-auto sm:flex-wrap">
           <a href={`tel:${company.phoneHref}`} className="btn-dark">
             {company.phone}
           </a>

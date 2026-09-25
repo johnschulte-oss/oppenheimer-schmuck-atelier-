@@ -27,10 +27,10 @@ const timeline = [
 export default function UeberUnsPage() {
   return (
     <>
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 md:grid-cols-2 md:gap-16 md:pb-24 md:pt-16">
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 pb-12 pt-6 sm:px-8 md:grid-cols-2 md:gap-16 md:pb-24 md:pt-16">
         <div>
           <p className="eyebrow">Über uns</p>
-          <h1 className="mt-5 font-serif text-5xl leading-[1.05] text-ink sm:text-6xl">
+          <h1 className="mt-4 font-serif text-[2.75rem] leading-[1.05] text-ink sm:mt-5 sm:text-6xl">
             Ein Haus mit Geschichte.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">
@@ -52,9 +52,9 @@ export default function UeberUnsPage() {
       </section>
 
       <section className="bg-ink text-cream">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-28">
           <p className="eyebrow !text-gold">Sir Ernest Oppenheimer</p>
-          <div className="mt-10 grid gap-10 md:grid-cols-3">
+          <div className="mt-8 grid gap-8 md:mt-10 md:grid-cols-3 md:gap-10">
             {timeline.map((t) => (
               <div key={t.year} className="border-t border-gold/60 pt-6">
                 <p className="font-serif text-5xl text-gold">{t.year}</p>
@@ -65,7 +65,7 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pt-20 sm:px-8 md:pt-28">
+      <section className="mx-auto max-w-7xl px-5 pt-14 sm:px-8 md:pt-28">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <h2 className="font-serif text-4xl text-ink sm:text-5xl">
             Unser Atelier
@@ -74,7 +74,7 @@ export default function UeberUnsPage() {
             Originales Fachwerk trifft auf helle, moderne Vitrinen.
           </p>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="-mx-5 mt-8 no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 md:mx-0 md:mt-12 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0">
           {[
             {
               src: "atelier-innen-1.jpg",
@@ -91,13 +91,13 @@ export default function UeberUnsPage() {
           ].map((img) => (
             <div
               key={img.src}
-              className="relative aspect-[4/5] overflow-hidden bg-sand"
+              className="relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden bg-sand sm:w-[45%] md:w-auto"
             >
               <Image
                 src={`/images/${img.src}`}
                 alt={img.alt}
                 fill
-                sizes="(min-width: 768px) 33vw, 100vw"
+                sizes="(min-width: 768px) 33vw, 80vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -105,11 +105,11 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-28">
         <h2 className="font-serif text-4xl text-ink sm:text-5xl">
           Früher und heute
         </h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-2 gap-4 md:mt-12 md:gap-8">
           <figure>
             <div className="relative aspect-[4/3] overflow-hidden bg-sand">
               <Image
@@ -142,7 +142,7 @@ export default function UeberUnsPage() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 md:grid-cols-2 md:gap-16">
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-20">
           <h2 className="font-serif text-4xl text-ink sm:text-5xl">
             Was uns ausmacht
           </h2>

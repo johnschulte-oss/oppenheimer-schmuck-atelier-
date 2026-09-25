@@ -47,9 +47,9 @@ function List({ items }: { items: string[] }) {
 export default function ServicePage() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-5 pb-6 pt-10 sm:px-8 md:pt-16">
+      <section className="mx-auto max-w-7xl px-5 pb-2 pt-6 sm:px-8 md:pb-6 md:pt-16">
         <p className="eyebrow">Service</p>
-        <h1 className="mt-5 max-w-2xl font-serif text-5xl leading-[1.05] text-ink sm:text-6xl">
+        <h1 className="mt-4 max-w-2xl font-serif text-[2.75rem] leading-[1.05] text-ink sm:mt-5 sm:text-6xl">
           Unsere Werkstatt ist für Sie da.
         </h1>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -64,7 +64,7 @@ export default function ServicePage() {
 
       <section
         id="schmuckservice"
-        className="mx-auto grid max-w-7xl scroll-mt-24 items-center gap-10 px-5 py-16 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24"
+        className="mx-auto grid max-w-7xl scroll-mt-24 items-center gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24"
       >
         <div className="relative aspect-[4/3] overflow-hidden bg-sand">
           <Image
@@ -87,7 +87,7 @@ export default function ServicePage() {
       </section>
 
       <section id="uhrenservice" className="scroll-mt-24 bg-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24">
           <div className="md:order-2">
             <div className="relative mx-auto aspect-[3/5] w-full max-w-xs">
               <Image

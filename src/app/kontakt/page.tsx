@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 pt-10 sm:px-8 md:grid-cols-2 md:gap-16 md:pt-16">
+      <section className="mx-auto grid max-w-7xl gap-10 px-5 pb-14 pt-6 sm:px-8 md:grid-cols-2 md:gap-16 md:pb-20 md:pt-16">
         <div>
           <p className="eyebrow">Kontakt & Anfahrt</p>
-          <h1 className="mt-5 font-serif text-5xl leading-[1.05] text-ink sm:text-6xl">
+          <h1 className="mt-4 font-serif text-[2.75rem] leading-[1.05] text-ink sm:mt-5 sm:text-6xl">
             Wir freuen uns auf Sie.
           </h1>
 

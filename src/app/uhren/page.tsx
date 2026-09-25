@@ -43,17 +43,17 @@ export default function UhrenPage() {
   return (
     <>
       <section className="bg-ink text-cream">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-16 md:py-20">
           <div>
             <p className="eyebrow !text-gold">Autorisierter Fachhändler</p>
-            <h1 className="mt-5 font-serif text-5xl leading-[1.05] sm:text-6xl">
+            <h1 className="mt-4 font-serif text-[2.75rem] leading-[1.05] sm:mt-5 sm:text-6xl">
               Seiko in Friedberg
             </h1>
             <p className="mt-6 max-w-md text-lg text-cream/85">
               Original-Uhren mit Herstellergarantie und Beratung vom Fachmann.
             </p>
           </div>
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden">
+          <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden sm:aspect-[3/4]">
             <Image
               src="/images/seiko/laden-alpinist.jpg"
               alt="Seiko Prospex Alpinist im Oppenheimer Schmuck-Atelier"
@@ -67,11 +67,11 @@ export default function UhrenPage() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-24">
           <h2 className="font-serif text-4xl text-ink sm:text-5xl">
             Beliebte Kollektionen
           </h2>
-          <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-12 lg:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-5 md:mt-12 lg:grid-cols-4">
             {lines.map((l) => (
               <div key={l.name} className="group">
                 <div className="relative aspect-square bg-cream">
@@ -80,10 +80,10 @@ export default function UhrenPage() {
                     alt={`Seiko ${l.name}`}
                     fill
                     sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="object-contain p-6 transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain p-3 transition sm:p-6-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-5 font-serif text-2xl text-ink">
+                <h3 className="mt-3 font-serif text-xl text-ink sm:mt-5 sm:text-2xl">
                   Seiko {l.name}
                 </h3>
                 <p className="mt-1 text-sm text-stone">{l.text}</p>
@@ -94,7 +94,7 @@ export default function UhrenPage() {
       </section>
 
       <section className="bg-ink text-cream">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-24">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <h2 className="font-serif text-4xl sm:text-5xl">
               Aus unserem Schaufenster
@@ -103,9 +103,12 @@ export default function UhrenPage() {
               Im Geschäft finden Sie noch viel mehr Auswahl.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-5 lg:grid-cols-3">
+          <div className="-mx-5 mt-8 no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 md:mt-12 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0">
             {shop.map((s) => (
-              <figure key={s.img}>
+              <figure
+                key={s.img}
+                className="w-[72%] shrink-0 snap-start sm:w-[45%] lg:w-auto"
+              >
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
                     src={`/images/seiko/${s.img}`}
@@ -124,7 +127,31 @@ export default function UhrenPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-20 sm:px-8 md:grid-cols-2 md:gap-16">
+      <section className="relative isolate overflow-hidden bg-ink text-cream">
+        <Image
+          src="/images/uhren-schaufenster.jpg"
+          alt="Uhren verschiedener Marken im Schaufenster des Ateliers"
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover opacity-40"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-28">
+          <p className="eyebrow !text-gold">Mehr als Seiko</p>
+          <h2 className="mt-4 max-w-xl font-serif text-4xl leading-tight sm:text-5xl">
+            Weitere Marken für Damen und Herren
+          </h2>
+          <p className="mt-5 max-w-md text-lg text-cream/80">
+            Neben Seiko führen wir eine schöne Auswahl weiterer Uhrenmarken. Von
+            sportlich bis elegant, für jeden Geschmack und jedes Budget.
+          </p>
+          <p className="mt-3 max-w-md text-cream/60">
+            Schauen Sie vorbei, wir zeigen Ihnen gern das ganze Sortiment.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 md:py-20 sm:px-8 md:grid-cols-2 md:gap-16">
         <div className="relative aspect-[4/3] overflow-hidden bg-sand">
           <Image
             src="/images/seiko/kingseiko-banner.jpg"

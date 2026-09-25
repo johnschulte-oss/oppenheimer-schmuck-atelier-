@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileBar from "@/components/MobileBar";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -45,10 +46,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de" className={`${cormorant.variable} ${jost.variable}`}>
-      <body className="font-sans font-light antialiased">
+      <body className="pb-14 font-sans font-light antialiased md:pb-0">
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileBar />
       </body>
     </html>
   );

@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function DatenschutzPage() {
   return (
     <section className="mx-auto max-w-3xl px-5 py-16 sm:px-8 md:py-24">
-      <h1 className="font-serif text-5xl text-ink">Datenschutzerklärung</h1>
+      <h1 className="font-serif text-4xl text-ink [hyphens:auto] sm:text-5xl">
+        Datenschutzerklärung
+      </h1>
       <div className="mt-10 space-y-8 leading-relaxed text-stone">
         <DraftNotice />
 

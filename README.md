@@ -9,4 +9,4 @@ npm install
 npm run dev
 ```
 
-Offene Punkte: Impressum/Datenschutz (Inhaber, USt-IdNr.), Fotos Goldscope SD515 und Silberschmuck.
+Offene Punkte: Impressum/Datenschutz (Inhaber, USt-IdNr.).

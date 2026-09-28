@@ -108,30 +108,30 @@ export default function Home() {
       </section>
 
       {/* Oppenheimer */}
-      <section className="bg-ink text-cream">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-28">
-          <div className="relative aspect-[4/3] overflow-hidden">
+      <section className="bg-[#f0e3d2]">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24">
+          <div className="relative mx-auto aspect-[2/3] w-full max-w-[20rem] md:max-w-[26rem]">
             <Image
-              src="/images/atelier-vitrine.jpg"
-              alt="Vitrine vor historischem Fachwerk im Atelier"
+              src="/images/haus-zeichnung.jpg"
+              alt="Zeichnung des Hauses Kaiserstraße 65 mit dem Oppenheimer Schmuck-Atelier"
               fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              sizes="(min-width: 768px) 416px, 320px"
+              className="object-contain"
             />
           </div>
           <div>
-            <p className="eyebrow !text-gold">Ein besonderes Haus</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">
+            <p className="eyebrow">Ein besonderes Haus</p>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-ink sm:text-5xl">
               Hier wurde 1880 der „Diamantenkönig“ geboren.
             </h2>
-            <p className="mt-6 max-w-md leading-relaxed text-cream/75">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">
               Sir Ernest Oppenheimer kam in diesem Haus zur Welt und prägte
               später den weltweiten Diamanthandel. Heute sind hier Diamanten
               wieder zu Hause.
             </p>
             <Link
               href="/ueber-uns"
-              className="mt-8 inline-flex items-center gap-2 border-b border-gold pb-1 text-sm tracking-wide text-cream transition-colors hover:text-gold"
+              className="mt-8 inline-flex items-center gap-2 border-b border-gold pb-1 text-sm tracking-wide text-ink transition-colors hover:text-gold-dark"
             >
               Unsere Geschichte →
             </Link>

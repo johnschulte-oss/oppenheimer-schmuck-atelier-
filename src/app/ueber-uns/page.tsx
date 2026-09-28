@@ -39,15 +39,17 @@ export default function UeberUnsPage() {
             Ernest Oppenheimer.
           </p>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden bg-sand">
-          <Image
-            src="/images/laden-heute.jpg"
-            alt="Das Oppenheimer Schmuck-Atelier in der Kaiserstraße 65 am Abend"
-            fill
-            priority
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-          />
+        <div className="bg-[#f0e3d2] px-6 py-8 sm:px-10">
+          <div className="relative mx-auto aspect-[2/3] w-full max-w-[18rem] md:max-w-[22rem]">
+            <Image
+              src="/images/haus-zeichnung.jpg"
+              alt="Zeichnung des Hauses Kaiserstraße 65, Geburtshaus von Sir Ernest Oppenheimer"
+              fill
+              priority
+              sizes="(min-width: 768px) 352px, 288px"
+              className="object-contain"
+            />
+          </div>
         </div>
       </section>
 

@@ -53,14 +53,13 @@ export const categories = [
     href: "/uhren",
     title: "Uhren",
     text: "Autorisierter Seiko-Händler",
-    image: "/images/seiko/presage-cocktail-time.png",
-    contain: true,
+    image: "/images/seiko/presage-openheart.jpg",
   },
   {
     href: "/ankauf",
     title: "Ankauf",
     text: "Gold, Silber, Platin & Luxusuhren",
-    image: "/images/rubin/aboutRubin_metals.webp",
+    image: "/images/altgold.jpg",
   },
   {
     href: "/service",

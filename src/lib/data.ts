@@ -33,21 +33,19 @@ export const categories = [
     href: "/trauringe",
     title: "Trauringe",
     text: "Für den schönsten Tag",
-    image: "/images/trauringe/gelbgold.jpg",
-    contain: true,
+    image: "/images/start-trauringe.png",
   },
   {
     href: "/verlobungsringe",
     title: "Verlobungsringe",
     text: "Die Frage aller Fragen",
-    image: "/images/rubin/config_oval.webp",
-    contain: true,
+    image: "/images/start-verlobungsring.png",
   },
   {
     href: "/schmuck",
     title: "Schmuck",
     text: "Diamant, Gold & Silber",
-    image: "/images/schmuck/ohrring-gold-closeup.jpg",
+    image: "/images/start-schmuck.png",
   },
   {
     href: "/uhren",
@@ -65,7 +63,7 @@ export const categories = [
     href: "/service",
     title: "Service",
     text: "Schmuck- & Uhrenwerkstatt",
-    image: "/images/proofmaster.png",
+    image: "/images/start-service.png",
     contain: true,
   },
 ];

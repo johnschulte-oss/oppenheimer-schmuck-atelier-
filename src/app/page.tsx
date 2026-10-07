@@ -4,8 +4,8 @@ import { categories, company, hours } from "@/lib/data";
 
 const trust = [
   {
-    title: "Autorisierter Seiko-Fachhändler",
-    text: "Original-Uhren mit Herstellergarantie.",
+    title: "Eigene Ringmanufaktur",
+    text: "Verlobungs- und Eheringe aus eigener Fertigung.",
   },
   {
     title: "Eigene Werkstatt",
@@ -30,7 +30,7 @@ export default function Home() {
             der bleibt.
           </h1>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-stone sm:mt-6">
-            Trauringe, Verlobungsringe, Schmuck und Seiko-Uhren. Im Geburtshaus
+            Trauringe, Verlobungsringe, Schmuck und Uhren. Im Geburtshaus
             von Sir Ernest Oppenheimer.
           </p>
           <div className="mt-7 grid grid-cols-2 gap-3 sm:mt-9 sm:flex sm:flex-wrap">
@@ -112,7 +112,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24">
           <div className="relative mx-auto aspect-[2/3] w-full max-w-[20rem] md:max-w-[26rem]">
             <Image
-              src="/images/haus-zeichnung.jpg"
+              src="/images/haus-skizze.png"
               alt="Zeichnung des Hauses Kaiserstraße 65 mit dem Oppenheimer Schmuck-Atelier"
               fill
               sizes="(min-width: 768px) 416px, 320px"

@@ -19,6 +19,25 @@ const styles = [
   { img: "diamanten.jpg", name: "Mit Diamanten" },
 ];
 
+const engravings = [
+  {
+    title: "Innengravur",
+    text: "Namen, Hochzeitsdatum oder ein eigener Satz auf der Innenseite.",
+  },
+  {
+    title: "Außengravur",
+    text: "Ornamente, Symbole oder Schriftzüge sichtbar auf dem Ring.",
+  },
+  {
+    title: "Handschrift",
+    text: "Ihre eigene Handschrift oder die eines geliebten Menschen.",
+  },
+  {
+    title: "Fingerabdruck",
+    text: "Der Fingerabdruck Ihres Partners, ganz persönlich im Ring.",
+  },
+];
+
 export default function TrauringePage() {
   return (
     <>
@@ -26,8 +45,8 @@ export default function TrauringePage() {
         eyebrow="Trauringe"
         title="Zwei Ringe. Ein Versprechen."
         text="Große Auswahl in Gold, Weißgold und Platin. Mit Gravur ganz nach Ihren Wünschen."
-        image="/images/rubin/rubin_engravings.webp"
-        imageAlt="Gravur „Love“ auf der Innenseite eines Goldrings"
+        image="/images/trauringe/trauringe-hero.png"
+        imageAlt="Zwei goldene Trauringe auf Seide, einer mit Diamanten"
       />
 
       <section className="bg-white">
@@ -57,13 +76,13 @@ export default function TrauringePage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-20">
-        <div className="relative mx-auto aspect-square w-full max-w-md bg-white">
+        <div className="relative aspect-[4/3] overflow-hidden bg-sand">
           <Image
-            src="/images/rubin/aboutRubin_engraving.webp"
-            alt="Trauringe mit persönlicher Gravur"
+            src="/images/rubin/rubin_engravings.webp"
+            alt="Gravur „Love“ auf der Innenseite eines Goldrings"
             fill
-            sizes="448px"
-            className="object-contain"
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
           />
         </div>
         <div>
@@ -71,11 +90,18 @@ export default function TrauringePage() {
           <h2 className="mt-4 font-serif text-4xl text-ink sm:text-5xl">
             Ihre Gravur
           </h2>
-          <ul className="mt-6 space-y-3 text-lg text-stone">
-            <li>Namen, Datum oder ein eigener Satz</li>
-            <li>Fingerabdruck oder Symbol</li>
-            <li>Individuelle Ringgröße und Breite</li>
-          </ul>
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">
+            Eine Gravur macht Ihre Ringe unverwechselbar. Wir beraten Sie
+            gern, welche Art am besten zu Ihnen passt.
+          </p>
+          <dl className="mt-8 max-w-md divide-y divide-line border-y border-line">
+            {engravings.map((e) => (
+              <div key={e.title} className="py-4">
+                <dt className="font-serif text-xl text-ink">{e.title}</dt>
+                <dd className="mt-1 text-stone">{e.text}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

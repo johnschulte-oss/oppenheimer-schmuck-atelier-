@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const shapes = [
+const shapes: { key: string; name: string; text: string; stone?: string }[] = [
   {
     key: "round",
     name: "Brillant",
@@ -36,16 +36,19 @@ const shapes = [
   },
   {
     key: "radiant",
+    stone: "radiant.jpg",
     name: "Radiant",
     text: "Rechteckig mit abgeschrägten Ecken und viel Brillanz.",
   },
   {
     key: "marquise",
+    stone: "marquise.jpg",
     name: "Marquise",
     text: "Schmal und spitz zulaufend. Wirkt besonders groß.",
   },
   {
     key: "heart",
+    stone: "heart.jpg",
     name: "Herz",
     text: "Das Symbol der Liebe, in Stein geschliffen.",
   },
@@ -94,11 +97,11 @@ export default function DiamondShapes() {
             >
               <span className="relative block aspect-square w-full">
                 <Image
-                  src={`/images/verlobungsringe/formen/${s.key}-stein.jpg`}
+                  src={`/images/rubin/${s.stone ?? `${s.key}.webp`}`}
                   alt=""
                   fill
                   sizes="120px"
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
+                  className="object-contain transition-transform duration-500 group-hover:rotate-12"
                 />
               </span>
               <span className="text-xs text-stone">{s.name}</span>

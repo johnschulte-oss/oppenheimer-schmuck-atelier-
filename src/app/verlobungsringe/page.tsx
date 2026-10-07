@@ -78,13 +78,13 @@ export default function VerlobungsringePage() {
           ))}
         </div>
         <p className="mt-10 text-stone">
-          Viele weitere Modelle zeigen wir Ihnen gern im Geschäft.
+          Viele weitere Modelle zeigen wir Ihnen gerne im Geschäft.
         </p>
       </section>
 
       <CtaBand
         title="Bereit für die große Frage?"
-        text="Wir beraten Sie diskret und in Ruhe, auch zu Ringgröße und Budget."
+        text="Wir beraten Sie diskret und in Ruhe, auch zu Ringgröße und Budget. Gestalten Sie Ihren Verlobungsring individuell mit uns vor Ort und vereinbaren Sie einen Beratungstermin."
       />
     </>
   );

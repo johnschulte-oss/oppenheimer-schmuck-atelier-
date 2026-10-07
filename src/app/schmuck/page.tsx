@@ -20,7 +20,7 @@ const sections: { id: string; title: string; text: string; items: Item[] }[] = [
     items: [
       { img: "kette-gold.jpg", name: "Anhänger & Ketten", product: true },
       { img: "ohrstecker-gold.jpg", name: "Ohrstecker", product: true },
-      { img: "tennisarmband.jpg", name: "Tennis-Armbänder", product: true },
+      { img: "tennisarmband-seide.jpg", name: "Tennis-Armbänder" },
       { img: "schmuckset.jpg", name: "Schmuck-Sets", product: true },
     ],
   },
@@ -52,8 +52,8 @@ export default function SchmuckPage() {
         eyebrow="Schmuck"
         title="Kleine Dinge, große Freude."
         text="Diamant-, Gold- und Silberschmuck für jeden Anlass."
-        image="/images/schmuck/ohrring-gold-closeup.jpg"
-        imageAlt="Ohrstecker in Gelbgold mit Diamant"
+        image="/images/schmuck/tennisarmband-seide.jpg"
+        imageAlt="Tennisarmband in Gelbgold mit Diamanten auf Seide"
       />
 
       <nav className="mx-auto no-scrollbar flex max-w-7xl gap-2 overflow-x-auto px-5 pb-2 sm:gap-3 sm:px-8">

@@ -4,9 +4,9 @@ import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Seiko Uhren",
+  title: "Uhren",
   description:
-    "Autorisierter Seiko-Fachhändler in Friedberg: Presage, Prospex, Seiko 5 Sports, Astron und King Seiko. Große Auswahl im Geschäft.",
+    "Uhren für Damen und Herren in Friedberg. Autorisierter Seiko-Fachhändler mit Presage, Prospex, Seiko 5 Sports und Astron, dazu weitere Marken und eigene Uhrenwerkstatt.",
   alternates: { canonical: "/uhren" },
 };
 
@@ -45,12 +45,13 @@ export default function UhrenPage() {
       <section className="bg-ink text-cream">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-16 md:py-20">
           <div>
-            <p className="eyebrow !text-gold">Autorisierter Fachhändler</p>
+            <p className="eyebrow !text-gold">Uhren in Friedberg</p>
             <h1 className="mt-4 font-serif text-[2.75rem] leading-[1.05] sm:mt-5 sm:text-6xl">
-              Seiko in Friedberg
+              Zeit für eine schöne Uhr
             </h1>
             <p className="mt-6 max-w-md text-lg text-cream/85">
-              Original-Uhren mit Herstellergarantie und Beratung vom Fachmann.
+              Sportlich, elegant oder klassisch: Uhren für Damen und Herren,
+              mit persönlicher Beratung und eigener Uhrenwerkstatt.
             </p>
           </div>
           <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden sm:aspect-[3/4]">
@@ -66,11 +67,39 @@ export default function UhrenPage() {
         </div>
       </section>
 
+      <section className="relative isolate overflow-hidden bg-ink text-cream border-t border-cream/10">
+        <Image
+          src="/images/uhren-schaufenster.jpg"
+          alt="Uhren verschiedener Marken im Schaufenster des Ateliers"
+          fill
+          sizes="100vw"
+          className="-z-10 object-cover opacity-40"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-28">
+          <p className="eyebrow !text-gold">Unsere Auswahl</p>
+          <h2 className="mt-4 max-w-xl font-serif text-4xl leading-tight sm:text-5xl">
+            Uhren verschiedener Marken
+          </h2>
+          <p className="mt-5 max-w-md text-lg text-cream/80">
+            Wir führen eine schöne Auswahl an Uhrenmarken. Von sportlich bis
+            elegant, für jeden Geschmack und jedes Budget.
+          </p>
+          <p className="mt-3 max-w-md text-cream/60">
+            Schauen Sie vorbei, wir zeigen Ihnen gern das ganze Sortiment.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-24">
-          <h2 className="font-serif text-4xl text-ink sm:text-5xl">
-            Beliebte Kollektionen
+          <p className="eyebrow">Autorisierter Fachhändler</p>
+          <h2 className="mt-4 font-serif text-4xl text-ink sm:text-5xl">
+            Seiko in Friedberg
           </h2>
+          <p className="mt-4 max-w-xl text-lg text-stone">
+            Original-Uhren mit Herstellergarantie. Beliebte Kollektionen:
+          </p>
           <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-5 md:mt-12 lg:grid-cols-4">
             {lines.map((l) => (
               <div key={l.name} className="group">
@@ -80,7 +109,7 @@ export default function UhrenPage() {
                     alt={`Seiko ${l.name}`}
                     fill
                     sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="object-contain p-3 transition sm:p-6-transform duration-700 group-hover:scale-105"
+                    className="object-contain p-3 transition-transform duration-700 group-hover:scale-105 sm:p-6"
                   />
                 </div>
                 <h3 className="mt-3 font-serif text-xl text-ink sm:mt-5 sm:text-2xl">
@@ -127,37 +156,13 @@ export default function UhrenPage() {
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden bg-ink text-cream">
-        <Image
-          src="/images/uhren-schaufenster.jpg"
-          alt="Uhren verschiedener Marken im Schaufenster des Ateliers"
-          fill
-          sizes="100vw"
-          className="-z-10 object-cover opacity-40"
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-28">
-          <p className="eyebrow !text-gold">Mehr als Seiko</p>
-          <h2 className="mt-4 max-w-xl font-serif text-4xl leading-tight sm:text-5xl">
-            Weitere Marken für Damen und Herren
-          </h2>
-          <p className="mt-5 max-w-md text-lg text-cream/80">
-            Neben Seiko führen wir eine schöne Auswahl weiterer Uhrenmarken. Von
-            sportlich bis elegant, für jeden Geschmack und jedes Budget.
-          </p>
-          <p className="mt-3 max-w-md text-cream/60">
-            Schauen Sie vorbei, wir zeigen Ihnen gern das ganze Sortiment.
-          </p>
-        </div>
-      </section>
-
       <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 md:py-20 sm:px-8 md:grid-cols-2 md:gap-16">
-        <div className="relative aspect-[4/3] overflow-hidden bg-sand">
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-sand">
           <Image
-            src="/images/seiko/kingseiko-banner.jpg"
-            alt="King Seiko"
+            src="/images/uhren-service.jpg"
+            alt="Uhrmacher setzt mit der Pinzette eine neue Batterie in eine Uhr ein"
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="(min-width: 768px) 448px, 100vw"
             className="object-cover"
           />
         </div>
@@ -177,7 +182,7 @@ export default function UhrenPage() {
       </section>
 
       <CtaBand
-        title="Ihre neue Seiko wartet."
+        title="Ihre neue Uhr wartet."
         text="Kommen Sie vorbei und probieren Sie Ihre Favoriten in Ruhe an."
       />
     </>

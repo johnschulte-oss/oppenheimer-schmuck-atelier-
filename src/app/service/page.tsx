@@ -68,8 +68,8 @@ export default function ServicePage() {
       >
         <div className="relative aspect-[4/3] overflow-hidden bg-sand">
           <Image
-            src="/images/rubin/rubin_engravings.webp"
-            alt="Gravur in einem Goldring"
+            src="/images/werkbank.jpg"
+            alt="Goldschmiede-Werkbank mit Werkzeugen von oben"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"

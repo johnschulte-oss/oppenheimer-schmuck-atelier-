@@ -133,8 +133,8 @@ export default function AnkaufPage() {
       <section className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 sm:px-8 md:grid-cols-2 md:gap-16 md:py-28">
         <div className="relative aspect-[4/3] overflow-hidden border border-line bg-white">
           <Image
-            src="/images/goldscope.jpg"
-            alt="Röntgenfluoreszenz-Gerät Goldscope SD515"
+            src="/images/rfa-geraet.jpg"
+            alt="Röntgenfluoreszenz-Gerät zur Edelmetallprüfung"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-contain p-4"

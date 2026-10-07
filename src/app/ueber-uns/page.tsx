@@ -42,7 +42,7 @@ export default function UeberUnsPage() {
         <div className="bg-[#f0e3d2] px-6 py-8 sm:px-10">
           <div className="relative mx-auto aspect-[2/3] w-full max-w-[18rem] md:max-w-[22rem]">
             <Image
-              src="/images/haus-zeichnung.jpg"
+              src="/images/haus-skizze.png"
               alt="Zeichnung des Hauses Kaiserstraße 65, Geburtshaus von Sir Ernest Oppenheimer"
               fill
               priority
@@ -104,42 +104,6 @@ export default function UeberUnsPage() {
               />
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 md:py-28">
-        <h2 className="font-serif text-4xl text-ink sm:text-5xl">
-          Früher und heute
-        </h2>
-        <div className="mt-8 grid grid-cols-2 gap-4 md:mt-12 md:gap-8">
-          <figure>
-            <div className="relative aspect-[4/3] overflow-hidden bg-sand">
-              <Image
-                src="/images/laden-frueher.jpg"
-                alt="Das Geschäft früher als Trauringzentrum"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover grayscale-[35%]"
-              />
-            </div>
-            <figcaption className="mt-4 font-serif text-2xl text-ink">
-              Früher
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative aspect-[4/3] overflow-hidden bg-sand">
-              <Image
-                src="/images/laden-heute.jpg"
-                alt="Das Oppenheimer Schmuck-Atelier heute"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <figcaption className="mt-4 font-serif text-2xl text-ink">
-              Heute
-            </figcaption>
-          </figure>
         </div>
       </section>
 

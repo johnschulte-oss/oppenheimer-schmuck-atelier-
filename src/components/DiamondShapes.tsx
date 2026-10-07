@@ -34,6 +34,21 @@ const shapes = [
     name: "Cushion",
     text: "Sanft abgerundete Ecken, weiches Licht.",
   },
+  {
+    key: "radiant",
+    name: "Radiant",
+    text: "Rechteckig mit abgeschrägten Ecken und viel Brillanz.",
+  },
+  {
+    key: "marquise",
+    name: "Marquise",
+    text: "Schmal und spitz zulaufend. Wirkt besonders groß.",
+  },
+  {
+    key: "heart",
+    name: "Herz",
+    text: "Das Symbol der Liebe, in Stein geschliffen.",
+  },
 ];
 
 export default function DiamondShapes() {
@@ -42,14 +57,14 @@ export default function DiamondShapes() {
 
   return (
     <div className="grid items-center gap-6 md:grid-cols-2 md:gap-16">
-      <div className="relative mx-auto aspect-square w-full max-w-[16rem] md:max-w-sm">
+      <div className="relative mx-auto aspect-square w-full max-w-[22rem] md:max-w-lg">
         {shapes.map((s, i) => (
           <Image
             key={s.key}
-            src={`/images/rubin/${s.key}.webp`}
-            alt={`Diamant im Schliff ${s.name}`}
+            src={`/images/verlobungsringe/formen/${s.key}.jpg`}
+            alt={`Verlobungsring mit Diamant im Schliff ${s.name}`}
             fill
-            sizes="384px"
+            sizes="(min-width: 768px) 512px, 352px"
             className={`object-contain transition-all duration-700 ${
               i === active ? "scale-100 opacity-100" : "scale-90 opacity-0"
             }`}
@@ -63,7 +78,7 @@ export default function DiamondShapes() {
         <p className="mt-4 min-h-[3.5rem] max-w-sm text-lg text-stone">
           {shape.text}
         </p>
-        <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-6 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-8 grid max-w-md grid-cols-3 gap-3">
           {shapes.map((s, i) => (
             <button
               key={s.key}
@@ -79,11 +94,11 @@ export default function DiamondShapes() {
             >
               <span className="relative block aspect-square w-full">
                 <Image
-                  src={`/images/rubin/${s.key}.webp`}
+                  src={`/images/verlobungsringe/formen/${s.key}-stein.jpg`}
                   alt=""
                   fill
-                  sizes="80px"
-                  className="object-contain transition-transform duration-500 group-hover:rotate-12"
+                  sizes="120px"
+                  className="object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </span>
               <span className="text-xs text-stone">{s.name}</span>

@@ -146,7 +146,7 @@ export default function AnkaufPage() {
             Röntgenfluoreszenz statt Schätzung
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-stone">
-            Mit unserem RFA-Gerät Goldscope SD515 bestimmen wir den genauen
+            Mit unserem RFA-Gerät bestimmen wir den genauen
             Edelmetallgehalt in Sekunden. Zerstörungsfrei, ohne Säuretest und
             direkt vor Ihren Augen.
           </p>

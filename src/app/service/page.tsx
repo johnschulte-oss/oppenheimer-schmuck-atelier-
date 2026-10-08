@@ -89,13 +89,13 @@ export default function ServicePage() {
       <section id="uhrenservice" className="scroll-mt-24 bg-white">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-16 md:py-24">
           <div className="md:order-2">
-            <div className="relative mx-auto aspect-[3/5] w-full max-w-xs">
+            <div className="relative aspect-[3/2] w-full overflow-hidden bg-cream">
               <Image
-                src="/images/proofmaster.png"
+                src="/images/proofmaster-wasser.jpg"
                 alt="Witschi Proofmaster zur Prüfung der Wasserdichtigkeit"
                 fill
-                sizes="320px"
-                className="object-contain"
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
           </div>
